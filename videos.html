@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="src/css/index.css">
+  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <title>Videos</title>
+</head>
+<body>
+  <!-- Modal add video -->
+  <div class="modal fade" id="add-video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5>Добавление видео</h5>
+        <div class="modal-body video-adding">
+          <p><label for="name">Название</label><input type="text" class="name input_style" id="name"></p>
+          <p><label for="DC">ДЦ</label><input type="text" class="DC input_style" name="DC"></p>
+          <p><label for="time">Время (сек.)</label><input type="text" class="time input_style"></p>
+          <p><label for="repeat">Повтор (сек.)</label><input type="text" class="repeat input_style"></p>
+          <p><label for="brand">Бренд</label><input type="text" class="brand input_style"></p>
+          <div class="file-upload">
+            <p>Видео</p>
+            <div class="file-input">
+              <label for="file">Выбрать файл</label>
+              <input type="file" id="file" class="file">
+            </div>
+          </div>
+          <button type="button" class="btn_add btn_style" onclick="document.location='videos.html'">Добавить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal edit video -->
+  <div class="modal fade" id="edit-video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5>Изменение видео</h5>
+        <div class="modal-body video-edit">
+          <p><label for="name">Название</label><input type="text" class="name input_style" id="name"></p>
+          <p><label for="DC">ДЦ</label><input type="text" class="DC input_style" name="DC"></p>
+          <p><label for="brand">Бренд</label><input type="text" class="brand input_style"></p>
+          <p><label for="time">Время (сек.)</label><input type="text" class="time input_style"></p>
+          <p><label for="repeat">Повтор (сек.)</label><input type="text" class="repeat input_style"></p>
+          <div class="file-upload">
+            <p>Видео</p>
+            <div class="file-input">
+              <label for="file">Выбрать файл</label>
+              <input type="file" id="file" class="file">
+            </div>
+          </div>
+          <button type="button" class="btn_save btn_style" onclick="document.location='videos.html'">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal delete video -->
+  <div class="modal fade" id="delete-video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5>Удалить выбранный видеоролик?</h5>
+        <div class="modal-body video-delete">
+          <button type="button" class="btn_delete btn_style" onclick="document.location='videos.html'">Удалить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <header class="header">
+      <div class="header__left">
+        <img src="src/images/icons/agat-logo.svg" onclick="document.location='index.html'">
+      </div>
+      <ul>
+          <ol><a href="consultants.html">Консультанты</a></ol>
+          <ol><a href="videos.html">Видеоролики</a></ol>
+          <ol><a href="logos.html">Логотипы</a></ol>
+      </ul>
+      <div class="header__icons">
+        <img src="src/images/icons/monitor.svg" onclick="document.location='index.html'">
+        <div class="btn-group">
+          <img src="src/images/icons/admin.svg" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="index.html">Выйти</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="title">
+        <lord-icon
+            src="https://cdn.lordicon.com/smeqxwcv.json"
+            trigger="loop"
+            delay="2000"
+            colors="primary:#ed1c24,secondary:#000000"
+            style="width:50px;height:50px">
+        </lord-icon>
+        <h4>Видеоролики</h4>
+      </div>
+      <div class="selection">
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>Дилерский центр</option>
+          <option value="1">Автомобили с пробегом НН_МСШ</option>
+          <option value="2">Автоцентр GEELY АГАТ</option>
+          <option value="3">Автоцентр в Афонино НН (Geely)</option>
+        </select>
+
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>Бренд</option>
+          <option value="1">Все</option>
+          <option value="2">Changan</option>
+          <option value="3">Geely</option>
+        </select>
+        <button type="submit" class="btn_apply btn_style">Применить</button>
+        <img src="src/images/icons/add.svg" data-bs-toggle="modal" data-bs-target="#add-video">
+      </div>
+        <div class="video">
+            <div class="video__item">
+              <div class="video__title">
+                <h6>Путешествие вместе с Lexus 2</h6>
+                <div class="btn-group dropend">
+                  <img src="src/images/icons/menu.svg" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item off">Отключить</a></li>
+                    <li><a class="dropdown-item on">Включить</a></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-video">Изменить</a></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-video">Удалить</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="video__main">
+                <video src="src/videos/example.mov" controls></video>
+                <div class="video__info">
+                  <div class="video__info-left">
+                    <div class="dealership">
+                      <p>Дилерский центр</p>
+                      <p><span>Автоцентр на Казанском НН (Lexus)</span></p>
+                    </div>
+                    <div class="brand">
+                      <p>Бренд</p>
+                      <p><span>LEXUS</span></p>
+                    </div>
+                  </div>
+                  <div class="video__info-right">
+                    <div class="repeat">
+                      <p>Повтор (сек.)</p>
+                      <p><span>60</span></p>
+                    </div>
+                    <div class="time">
+                      <p>Время показа (сек.)</p>
+                      <p><span>20</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video__item">
+              <div class="video__title">
+                <h6>Путешествие вместе с Lexus 2</h6>
+                <div class="btn-group dropend">
+                  <img src="src/images/icons/menu.svg" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item off">Отключить</a></li>
+                    <li><a class="dropdown-item on">Включить</a></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-video">Изменить</a></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-video">Удалить</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="video__main">
+                <video src="src/videos/example.mov" controls></video>
+                <div class="video__info">
+                  <div class="video__info-left">
+                    <div class="dealership">
+                      <p>Дилерский центр</p>
+                      <p><span>Автоцентр на Казанском НН (Lexus)</span></p>
+                    </div>
+                    <div class="brand">
+                      <p>Бренд</p>
+                      <p><span>LEXUS</span></p>
+                    </div>
+                  </div>
+                  <div class="video__info-right">
+                    <div class="repeat">
+                      <p>Повтор (сек.)</p>
+                      <p><span>60</span></p>
+                    </div>
+                    <div class="time">
+                      <p>Время показа (сек.)</p>
+                      <p><span>20</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+        <footer class="footer">
+          <div class="page-up">
+              <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+          </div>
+          <ul class="footer__links">
+            <ol><a href="index.html">Сервисный монитор</a></ol>
+            <ol><a href="consultants.html">Консультанты</a></ol>
+            <ol><a href="videos.html">Видеоролики</a></ol>
+            <ol><a href="logos.html">Логотипы</a></ol>
+          </ul>
+        </footer>
+      </div>
+      <script src="./dist/app.js"></script>
+    </body>
+    </html>

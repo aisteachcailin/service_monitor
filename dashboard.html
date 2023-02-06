@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="src/css/index.css">
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__left">
+        <img src="src/images/icons/agat-logo.svg" onclick="document.location='index.html'">
+        <h4>Автоцентр на Тайшетском ВЛГ (ГАЗ, Haval, Changan)</h4>
+      </div>
+        <img src="src/images/icons/monitor.svg" onclick="document.location='index.html'" id="dasboard_icon">
+    </header>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active data-bs-interval="2000"">
+          <div class="dashboard">
+            <div class="consultant">
+              <img src="src/images/consultants/consultant.png" alt="">
+              <h5>Тотьмянин Дмитрий</h5>
+              <p>Консультант</p>
+            </div>
+            <section class="cars">
+                <div class="info">
+                  <div class="info__status">
+                    <img src="src/images/icons/wait.svg" alt="">
+                    <p>Ожидание</p>
+                  </div>
+                  <div class="info__item">
+                    <p>09:00</p>
+                    <p>Р251УО/34</p>
+                    <p>HAVAL</p>
+                  </div>
+                  <div class="info__item">
+                    <p>12:00</p>
+                    <p>Р251УО/34</p>
+                    <p>HAVAL</p>
+                  </div>
+                  <div class="info__item">
+                    <p>14:00</p>
+                    <p>Р289УО/21</p>
+                    <p>Lexus</p>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="info__status">
+                    <img src="src/images/icons/reception.svg" alt="">
+                    <p>Приемка</p>
+                  </div>
+                  <div class="info__item">
+                    <p>08:00</p>
+                    <p>K2900УО/04</p>
+                    <p>HAVAL</p>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="info__status">
+                    <img src="src/images/icons/work.svg" alt="">
+                    <p>В работе</p>
+                  </div>
+                  <div class="info__item">
+                    <p>12:00</p>
+                    <p>A51УО/74</p>
+                    <p>Geely</p>
+                  </div>
+                </div>
+            </section>
+          </div>
+        </div>
+        <div class="carousel-item data-bs-interval="2000"">
+          <div class="dashboard">
+            <div class="consultant">
+              <img src="src/images/consultants/user.png" alt="">
+              <h5>Иванов Иван</h5>
+              <p>Консультант</p>
+            </div>
+            <section class="cars">
+                <div class="info">
+                  <div class="info__status">
+                    <img src="src/images/icons/reception.svg" alt="">
+                    <p>Приемка</p>
+                  </div>
+                  <div class="info__item">
+                    <p>08:00</p>
+                    <p>K2900УО/04</p>
+                    <p>HAVAL</p>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="info__status">
+                    <img src="src/images/icons/work.svg" alt="">
+                    <p>В работе</p>
+                  </div>
+                  <div class="info__item">
+                    <p>12:00</p>
+                    <p>A51УО/74</p>
+                    <p>Geely</p>
+                  </div>
+                </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
