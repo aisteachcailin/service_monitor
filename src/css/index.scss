@@ -269,9 +269,7 @@ section.cars {
 
 .consultant_info, .video__item, .logo {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
-    // border-bottom: 1px solid $grey;
 }
 
 .consultant_info {
@@ -306,7 +304,7 @@ section.cars {
         height: 130px;
       }
       label#label-desktop {
-        left: 13px;
+        left: 23px;
         top: 0;
         position: absolute;
         width: 130px;
