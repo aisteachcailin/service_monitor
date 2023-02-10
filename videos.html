@@ -26,8 +26,8 @@
         <div class="modal-body video-adding">
           <p><label for="name">Название</label><input type="text" class="name input_style" id="name"></p>
           <p><label for="DC">ДЦ</label><input type="text" class="DC input_style" name="DC"></p>
-          <p><label for="time">Время (сек.)</label><input type="text" class="time input_style"></p>
-          <p><label for="repeat">Повтор (сек.)</label><input type="text" class="repeat input_style"></p>
+          <p><label for="time">Время</label><input type="text" class="time input_style"></p>
+          <p><label for="repeat">Повтор</label><input type="text" class="repeat input_style"></p>
           <p><label for="brand">Бренд</label><input type="text" class="brand input_style"></p>
           <div class="file-upload">
             <p>Видео</p>
@@ -52,8 +52,8 @@
           <p><label for="name">Название</label><input type="text" class="name input_style" id="name"></p>
           <p><label for="DC">ДЦ</label><input type="text" class="DC input_style" name="DC"></p>
           <p><label for="brand">Бренд</label><input type="text" class="brand input_style"></p>
-          <p><label for="time">Время (сек.)</label><input type="text" class="time input_style"></p>
-          <p><label for="repeat">Повтор (сек.)</label><input type="text" class="repeat input_style"></p>
+          <p><label for="time">Время</label><input type="text" class="time input_style"></p>
+          <p><label for="repeat">Повтор</label><input type="text" class="repeat input_style"></p>
           <div class="file-upload">
             <p>Видео</p>
             <div class="file-input">
@@ -80,15 +80,15 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container-fluid">
     <header class="header">
       <div class="header__left">
         <img src="src/images/icons/agat-logo.svg" onclick="document.location='index.html'">
       </div>
       <ul>
-          <ol><a href="consultants.html">Консультанты</a></ol>
-          <ol><a href="videos.html">Видеоролики</a></ol>
-          <ol><a href="logos.html">Логотипы</a></ol>
+        <ol><a href="consultants.html">Консультанты</a></ol>
+        <ol><a href="videos.html">Видеоролики</a></ol>
+        <ol><a href="logos.html">Логотипы</a></ol>
       </ul>
       <div class="header__icons">
         <img src="src/images/icons/monitor.svg" onclick="document.location='index.html'">
@@ -97,6 +97,17 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="index.html">Выйти</a>
           </div>
+        </div>
+      </div>
+      <div class="btn-group adapt">
+        <img src="src/images/icons/burger.svg" id="burger" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="index.html">Сервисный монитор</a>
+          <a class="dropdown-item" href="consultants.html">Консультанты</a>
+          <a class="dropdown-item" href="videos.html">Видеоролики</a>
+          <a class="dropdown-item" href="logos.html">Логотипы</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="index.html">Выйти</a>
         </div>
       </div>
     </header>
@@ -125,8 +136,10 @@
           <option value="2">Changan</option>
           <option value="3">Geely</option>
         </select>
-        <button type="submit" class="btn_apply btn_style">Применить</button>
-        <img src="src/images/icons/add.svg" data-bs-toggle="modal" data-bs-target="#add-video">
+        <div class="buttons-group">
+          <button type="submit" class="btn_apply btn_style">Применить</button>
+          <img src="src/images/icons/add.svg" data-bs-toggle="modal" data-bs-target="#add-video">
+        </div>
       </div>
         <div class="video">
             <div class="video__item">
@@ -135,8 +148,7 @@
                 <div class="btn-group dropend">
                   <img src="src/images/icons/menu.svg" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item off">Отключить</a></li>
-                    <li><a class="dropdown-item on">Включить</a></li>
+                    <li><a class="dropdown-item switch" id="first-switch" onclick="switchBtn()">Включить</a></li>
                     <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-video">Изменить</a></li>
                     <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-video">Удалить</a></li>
                   </ul>
@@ -175,8 +187,7 @@
                 <div class="btn-group dropend">
                   <img src="src/images/icons/menu.svg" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item off">Отключить</a></li>
-                    <li><a class="dropdown-item on">Включить</a></li>
+                    <li><a class="dropdown-item switch" id="second" onclick="switchBtn()">Отключить</a></li>
                     <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-video">Изменить</a></li>
                     <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-video">Удалить</a></li>
                   </ul>
@@ -215,13 +226,26 @@
               <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
           </div>
           <ul class="footer__links">
+            <div class="footer__links-group">
             <ol><a href="index.html">Сервисный монитор</a></ol>
             <ol><a href="consultants.html">Консультанты</a></ol>
+            </div>
+            <div class="footer__links-group">
             <ol><a href="videos.html">Видеоролики</a></ol>
             <ol><a href="logos.html">Логотипы</a></ol>
+            </div>
           </ul>
         </footer>
       </div>
-      <script src="./dist/app.js"></script>
+      <script>
+      function switchBtn() {
+        var i = $(".switch").html();
+        if (i == "Включить") {
+          $(".switch").html("Отключить");
+          } else {
+            $(".switch").html("Включить");
+          }
+      }
+      </script>
     </body>
     </html>

@@ -17,7 +17,7 @@
   <title>Consultants</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <header class="header">
       <div class="header__left">
         <img src="src/images/icons/agat-logo.svg" onclick="document.location='index.html'">
@@ -34,6 +34,17 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="index.html">Выйти</a>
           </div>
+        </div>
+      </div>
+      <div class="btn-group adapt">
+        <img src="src/images/icons/burger.svg" id="burger" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="index.html">Сервисный монитор</a>
+          <a class="dropdown-item" href="consultants.html">Консультанты</a>
+          <a class="dropdown-item" href="videos.html">Видеоролики</a>
+          <a class="dropdown-item" href="logos.html">Логотипы</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="index.html">Выйти</a>
         </div>
       </div>
     </header>
@@ -70,11 +81,12 @@
             <img src="src/images/consultants/consultant.png" alt="">
             <div class="file-upload">
               <div class="file-input">
-                <label for="file">+</label>
+                <label for="file" id="label-desktop">+</label>
+                <label for="file" id="label-adapt">изменить фото</label>
                 <input type="file" id="file" class="file">
               </div>
             </div>
-            <h6>Тотьмянин Дмитрий</h6>
+            <h6>Иванов Иван</h6>
             <p>Сервисный консультант</p>
           </div>
           <div class="consultant_right">
@@ -88,12 +100,14 @@
             </div>
           </div>
         </div>
+
         <div class="consultant_info">
           <div class="consultant_left">
             <img src="src/images/consultants/user.png" alt="">
             <div class="file-upload">
               <div class="file-input">
-                <label for="file">+</label>
+                <label for="file" id="label-desktop">+</label>
+                <label for="file" id="label-adapt">изменить фото</label>
                 <input type="file" id="file" class="file">
               </div>
             </div>
@@ -118,10 +132,14 @@
           <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
       </div>
       <ul class="footer__links">
+        <div class="footer__links-group">
         <ol><a href="index.html">Сервисный монитор</a></ol>
         <ol><a href="consultants.html">Консультанты</a></ol>
+        </div>
+        <div class="footer__links-group">
         <ol><a href="videos.html">Видеоролики</a></ol>
         <ol><a href="logos.html">Логотипы</a></ol>
+        </div>
       </ul>
     </footer>
   </div>

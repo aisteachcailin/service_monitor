@@ -25,13 +25,18 @@
           <h5>Добавление логотипа</h5>
         <div class="modal-body logo-adding">
           <p><label for="DC">ДЦ</label><input type="text" class="DC input_style" name="DC"></p>
-          <p><label for="brand">Бренд</label><input type="text" class="brand input_style"></p>
+          <p><label for="brand">Бренд</label><input type="text" class="brand input_style" name="brand"></p>
           <div class="file-upload">
             <p>Логотип</p>
             <div class="file-input">
               <label for="file">Выбрать файл</label>
               <input type="file" id="file" class="file">
             </div>
+          </div>
+          <div class="checkbox"><input type="checkbox" class="checkbox" id="checkbox" name="checkbox" onclick="chooseExist()"><label for="checkbox">Выбрать из существующих</label></div>
+          <div class="logo-exist">
+            <img src="src/images/logos/skoda.png" alt="">
+            <img src="src/images/logos/ford.png" alt="">
           </div>
           <button type="button" class="btn_add btn_style" onclick="document.location='logos.html'">Добавить</button>
         </div>
@@ -74,7 +79,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container-fluid">
     <header class="header">
       <div class="header__left">
         <img src="src/images/icons/agat-logo.svg" onclick="document.location='index.html'">
@@ -91,6 +96,17 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="index.html">Выйти</a>
           </div>
+        </div>
+      </div>
+      <div class="btn-group adapt">
+        <img src="src/images/icons/burger.svg" id="burger" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="index.html">Сервисный монитор</a>
+          <a class="dropdown-item" href="consultants.html">Консультанты</a>
+          <a class="dropdown-item" href="videos.html">Видеоролики</a>
+          <a class="dropdown-item" href="logos.html">Логотипы</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item" href="index.html">Выйти</a>
         </div>
       </div>
     </header>
@@ -119,8 +135,10 @@
           <option value="2">Changan</option>
           <option value="3">Geely</option>
         </select>
-        <button type="submit" class="btn_apply btn_style">Применить</button>
-        <img src="src/images/icons/add.svg" data-bs-toggle="modal" data-bs-target="#add-logo">
+        <div class="buttons-group">
+          <button type="submit" class="btn_apply btn_style">Применить</button>
+          <img src="src/images/icons/add.svg" data-bs-toggle="modal" data-bs-target="#add-logo">
+        </div>
       </div>
       <div class="logos">
         <div class="logo">
@@ -170,17 +188,30 @@
       </div>
       </div>
 
-    <footer class="footer">
-      <div class="page-up">
-          <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
-      </div>
-      <ul class="footer__links">
-        <ol><a href="index.html">Сервисный монитор</a></ol>
-        <ol><a href="consultants.html">Консультанты</a></ol>
-        <ol><a href="videos.html">Видеоролики</a></ol>
-        <ol><a href="logos.html">Логотипы</a></ol>
-      </ul>
-    </footer>
+      <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <ul class="footer__links">
+          <div class="footer__links-group">
+          <ol><a href="index.html">Сервисный монитор</a></ol>
+          <ol><a href="consultants.html">Консультанты</a></ol>
+          </div>
+          <div class="footer__links-group">
+          <ol><a href="videos.html">Видеоролики</a></ol>
+          <ol><a href="logos.html">Логотипы</a></ol>
+          </div>
+        </ul>
+      </footer>
   </div>
+  <script>
+  function chooseExist() {
+      if(document.getElementById('checkbox').checked == true) {
+          $(".logo-exist").fadeIn();
+      } else {
+        $(".logo-exist").hide();
+      }
+    }
+  </script>
 </body>
 </html>
