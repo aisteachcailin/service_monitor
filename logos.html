@@ -7,12 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./bootstrap.css">
   <link rel="stylesheet" href="src/css/index.css">
   <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
   <title>Logos</title>
 </head>
@@ -32,11 +29,6 @@
               <label for="file">Выбрать файл</label>
               <input type="file" id="file" class="file">
             </div>
-          </div>
-          <div class="checkbox"><input type="checkbox" class="checkbox" id="checkbox" name="checkbox" onclick="chooseExist()"><label for="checkbox">Выбрать из существующих</label></div>
-          <div class="logo-exist">
-            <img src="src/images/logos/skoda.png" alt="">
-            <img src="src/images/logos/ford.png" alt="">
           </div>
           <button type="button" class="btn_add btn_style" onclick="document.location='logos.html'">Добавить</button>
         </div>
@@ -204,14 +196,6 @@
         </ul>
       </footer>
   </div>
-  <script>
-  function chooseExist() {
-      if(document.getElementById('checkbox').checked == true) {
-          $(".logo-exist").fadeIn();
-      } else {
-        $(".logo-exist").hide();
-      }
-    }
-  </script>
+  <script src="./dist/app.js"></script>
 </body>
 </html>

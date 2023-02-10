@@ -7,12 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./bootstrap.css">
   <link rel="stylesheet" href="src/css/index.css">
   <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
   <title>Videos</title>
 </head>
@@ -148,7 +145,7 @@
                 <div class="btn-group dropend">
                   <img src="src/images/icons/menu.svg" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item switch" id="first-switch" onclick="switchBtn()">Включить</a></li>
+                    <li><a class="dropdown-item">Включить</a></li>
                     <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-video">Изменить</a></li>
                     <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-video">Удалить</a></li>
                   </ul>
@@ -187,7 +184,7 @@
                 <div class="btn-group dropend">
                   <img src="src/images/icons/menu.svg" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item switch" id="second" onclick="switchBtn()">Отключить</a></li>
+                    <li><a class="dropdown-item">Включить</a></li>
                     <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-video">Изменить</a></li>
                     <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete-video">Удалить</a></li>
                   </ul>
@@ -237,15 +234,6 @@
           </ul>
         </footer>
       </div>
-      <script>
-      function switchBtn() {
-        var i = $(".switch").html();
-        if (i == "Включить") {
-          $(".switch").html("Отключить");
-          } else {
-            $(".switch").html("Включить");
-          }
-      }
-      </script>
+      <script src="./dist/app.js"></script>
     </body>
     </html>
