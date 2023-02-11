@@ -24,6 +24,7 @@ input {
   display: flex;
   align-items: center;
 }
+
 .title h4 {
   margin: 0;
   font-weight: bold;
@@ -35,6 +36,7 @@ input {
   width: 900px;
   justify-content: space-between;
 }
+
 .selection select.form-select {
   margin-top: 16px;
   font-size: 16px;
@@ -48,14 +50,17 @@ input {
   justify-content: space-between;
   padding: 30px;
 }
+
 .header a {
   text-decoration: none;
   color: #000;
 }
+
 .header ul {
   display: flex;
   padding: 0;
 }
+
 .header ul ol a:hover {
   color: #ED1C24;
   transition: 0.3s;
@@ -65,9 +70,11 @@ input {
   display: flex;
   align-items: center;
 }
+
 .header__left img {
   width: 150px;
 }
+
 .header__left h4 {
   margin: 0 30px;
 }
@@ -78,6 +85,7 @@ input {
   width: 120px;
   cursor: pointer;
 }
+
 .header__icons img {
   width: 40px;
 }
@@ -95,20 +103,24 @@ img#dasboard_icon, img#burger, img#admin {
   justify-content: space-evenly;
   border-top: 1px solid #dee2e6;
 }
+
 .footer ul {
   margin-right: 25px;
   margin-top: 35px;
   padding: 0;
 }
+
 .footer ul ol {
   display: inline;
   padding-right: 32px;
   font-size: 14px;
 }
+
 .footer ul ol a {
   text-decoration: none;
   color: rgba(26, 26, 26, 0.75);
 }
+
 .footer ul ol a:hover {
   color: red;
   transition: 0.3s;
@@ -119,6 +131,7 @@ img#dasboard_icon, img#burger, img#admin {
   bottom: 80%;
   left: 50%;
 }
+
 .page-up a {
   display: inline-block;
   color: #ffffff;
@@ -140,13 +153,16 @@ img#dasboard_icon, img#burger, img#admin {
   margin: 80px auto;
   text-align: center;
 }
+
 .selection_monitor select.form-select {
   margin: 30px auto;
   font-size: 18px;
 }
+
 .selection_monitor option {
   font-size: 18px;
 }
+
 .selection_monitor .btn_choose {
   margin-top: 30px;
 }
@@ -170,6 +186,7 @@ option {
   color: #fff;
   font-weight: bold;
 }
+
 .btn_style:hover {
   background: rgba(255, 0, 10, 0.5882352941);
   transition: 0.3s;
@@ -194,6 +211,7 @@ option {
   align-items: center;
   text-align: center;
 }
+
 .consultant img {
   width: 200px;
   height: 200px;
@@ -203,6 +221,7 @@ option {
   border-radius: 200px;
   object-fit: cover;
 }
+
 .consultant p, .consultant_left p {
   color: rgba(0, 0, 0, 0.75);
 }
@@ -230,6 +249,7 @@ section.cars {
 .info__status {
   margin: 10px 25px;
 }
+
 .info__status p {
   margin: auto;
   display: inline;
@@ -260,10 +280,12 @@ section.cars {
   justify-content: space-around;
   margin-left: 50px;
 }
+
 .consultant_right p {
   color: rgba(0, 0, 0, 0.75);
   font-size: 14px;
 }
+
 .consultant_right p span {
   color: #000;
   font-size: 16px;
@@ -274,13 +296,16 @@ section.cars {
   margin: 25px;
   position: relative;
 }
+
 .consultant_left p {
   font-size: 14px;
 }
+
 .consultant_left img {
   width: 130px;
   height: 130px;
 }
+
 .consultant_left label#label-desktop {
   left: 23px;
   top: 0;
@@ -294,10 +319,12 @@ section.cars {
   font-size: 30px;
   opacity: 0;
 }
+
 .consultant_left label#label-desktop:hover {
   opacity: 1;
   transition: 0.5s;
 }
+
 .consultant_left .file-upload {
   width: fit-content;
 }
@@ -312,6 +339,7 @@ section.cars {
   padding: 25px 0;
   width: 850px;
 }
+
 .video__item h6 {
   font-weight: bold;
   margin: 0;
@@ -327,10 +355,12 @@ video {
   justify-content: space-between;
   width: 500px;
 }
+
 .video__info p, .logo p {
   color: rgba(0, 0, 0, 0.75);
   font-size: 14px;
 }
+
 .video__info p span, .logo p span {
   color: #000;
   font-size: 16px;
@@ -359,6 +389,7 @@ video {
 .logo {
   padding: 35px 0;
 }
+
 .logo .btn-group.dropend {
   position: absolute;
   right: 0;
@@ -368,7 +399,7 @@ video {
 .logo__main {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 35%;
 }
 
 .dealership, .video__title {
@@ -383,6 +414,7 @@ video {
   display: flex;
   margin: 0 20px;
 }
+
 .checkbox label {
   padding: 5px;
 }
@@ -390,6 +422,7 @@ video {
 .logo-exist {
   display: none; /*по умолчанию все логотипы скрыты до нажатия на флажок чекбокса*/
 }
+
 .logo-exist img {
   width: 100px;
 }
@@ -399,11 +432,13 @@ video {
   text-align: center;
   margin-top: 45px;
 }
+
 .modal .btn_authorization, .modal .btn_add {
   width: 120px;
   height: 40px;
   font-size: 14px;
 }
+
 .modal p {
   display: flex;
   justify-content: space-between;
@@ -425,6 +460,7 @@ button.btn-close {
   height: 250px;
   justify-content: space-evenly;
 }
+
 .authorization p {
   justify-content: center;
   color: #ED1C24;
@@ -453,6 +489,7 @@ button.btn-close {
   margin-top: 30px;
   margin-bottom: 10px;
 }
+
 .video-adding .btn_add:hover, .video-adding .btn_save:hover, .video-adding .btn_delete:hover, .video-edit .btn_add:hover, .video-edit .btn_save:hover, .video-edit .btn_delete:hover, .video-delete .btn_add:hover, .video-delete .btn_save:hover, .video-delete .btn_delete:hover, .logo-adding .btn_add:hover, .logo-adding .btn_save:hover, .logo-adding .btn_delete:hover, .logo-edit .btn_add:hover, .logo-edit .btn_save:hover, .logo-edit .btn_delete:hover, .logo-delete .btn_add:hover, .logo-delete .btn_save:hover, .logo-delete .btn_delete:hover {
   background-color: #ED1C24;
   color: #fff;
@@ -481,6 +518,7 @@ button.btn-close {
   display: flex;
   justify-content: space-between;
 }
+
 .file-upload p {
   margin: 0;
 }
@@ -550,12 +588,16 @@ button.btn-close {
     width: 450px;
   }
   label#label-adapt {
-    left: 45px;
-    top: 240px;
+    left: 25px;
+    top: 215px;
   }
 }
 /* Телефоны = 320px */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+  .content {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
   .header {
     padding: 20px;
   }
@@ -575,11 +617,17 @@ button.btn-close {
     width: 330px;
   }
   label#label-adapt {
-    left: 30px;
-    top: 270px;
+    left: 25px;
+    bottom: -15px;
   }
   .consultant_info {
-    width: 380px;
+    width: auto;
+    padding: 5px 0;
+    flex-direction: column;
+  }
+  .consultant_left {
+    margin: 20px 0;
+    position: relative;
   }
   .consultant_right {
     margin-left: 15px;
@@ -628,7 +676,7 @@ button.btn-close {
     display: none;
   }
   h5.title-adapt {
-    margin: 30px auto;
+    margin: 20px auto;
     text-align: center;
   }
   .btn_style {
@@ -643,12 +691,9 @@ button.btn-close {
   .consultant_info {
     position: relative;
   }
-  .consultant_left {
-    position: initial;
-  }
   .consultant img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
   }
   label#label-desktop {
     display: none;
@@ -674,5 +719,11 @@ button.btn-close {
     display: contents;
   }
 }
+@media only screen and (max-width: 370px) {
+  ul.footer__links {
+    display: none;
+  }
+}
+
 
 /*# sourceMappingURL=index.css.map */
