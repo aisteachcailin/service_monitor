@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+$red: #ED1C24;
+$pink: rgba(255, 0, 10, 0.5882352941);
+$light-grey: #dee2e6;
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -62,17 +67,16 @@ input {
 }
 
 .header ul ol a:hover {
-  color: #ED1C24;
+  color: $red;
   transition: 0.3s;
 }
 
 .header__left {
   display: flex;
   align-items: center;
-}
-
-.header__left img {
-  width: 150px;
+    img {
+    width: 150px;
+  }
 }
 
 .header__left h4 {
@@ -101,7 +105,7 @@ img#dasboard_icon, img#burger, img#admin {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid $light-grey;
 }
 
 .footer ul {
@@ -136,7 +140,7 @@ img#dasboard_icon, img#burger, img#admin {
   display: inline-block;
   color: #ffffff;
   width: 50px;
-  background: #ED1C24;
+  background: $red;
   line-height: 50px;
   text-align: center;
   border-radius: 50%;
@@ -179,7 +183,7 @@ option {
 .btn_style {
   width: 150px;
   height: 50px;
-  background: #ED1C24;
+  background: $red;
   border-radius: 50px;
   border: none;
   letter-spacing: 0.12em;
@@ -188,7 +192,7 @@ option {
 }
 
 .btn_style:hover {
-  background: rgba(255, 0, 10, 0.5882352941);
+  background: $pink;
   transition: 0.3s;
 }
 
@@ -350,6 +354,11 @@ video {
   height: 200px;
 }
 
+.video__title {
+  height: 25px;
+  position: relative;
+}
+
 .video__info, .logo {
   display: flex;
   justify-content: space-between;
@@ -388,11 +397,12 @@ video {
 /*logos*/
 .logo {
   padding: 35px 0;
+  position: relative;
 }
 
 .logo .btn-group.dropend {
   position: absolute;
-  right: 0;
+  right: 20%;
   top: 0;
 }
 
@@ -400,14 +410,6 @@ video {
   display: flex;
   flex-direction: column;
   width: 35%;
-}
-
-.dealership, .video__title {
-  position: relative;
-}
-
-.dealership p, .video__title {
-  height: 25px;
 }
 
 .checkbox {
@@ -463,13 +465,13 @@ button.btn-close {
 
 .authorization p {
   justify-content: center;
-  color: #ED1C24;
+  color: $red;
   display: none;
 }
 
 .input_style {
   border-radius: 20px;
-  border-color: #dee2e6;
+  border-color: $light-grey;
   border-style: solid;
   width: 250px;
   height: 40px;
@@ -483,15 +485,15 @@ button.btn-close {
 }
 
 .video-adding .btn_add, .video-adding .btn_save, .video-adding .btn_delete, .video-edit .btn_add, .video-edit .btn_save, .video-edit .btn_delete, .video-delete .btn_add, .video-delete .btn_save, .video-delete .btn_delete, .logo-adding .btn_add, .logo-adding .btn_save, .logo-adding .btn_delete, .logo-edit .btn_add, .logo-edit .btn_save, .logo-edit .btn_delete, .logo-delete .btn_add, .logo-delete .btn_save, .logo-delete .btn_delete {
-  color: #ED1C24;
-  border: 2px solid #ED1C24;
+  color: $red;
+  border: 2px solid $red;
   background-color: #fff;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
 .video-adding .btn_add:hover, .video-adding .btn_save:hover, .video-adding .btn_delete:hover, .video-edit .btn_add:hover, .video-edit .btn_save:hover, .video-edit .btn_delete:hover, .video-delete .btn_add:hover, .video-delete .btn_save:hover, .video-delete .btn_delete:hover, .logo-adding .btn_add:hover, .logo-adding .btn_save:hover, .logo-adding .btn_delete:hover, .logo-edit .btn_add:hover, .logo-edit .btn_save:hover, .logo-edit .btn_delete:hover, .logo-delete .btn_add:hover, .logo-delete .btn_save:hover, .logo-delete .btn_delete:hover {
-  background-color: #ED1C24;
+  background-color: $red;
   color: #fff;
   border: none;
   transition: 0.6s;
@@ -547,42 +549,36 @@ button.btn-close {
 }
 /* Планшеты = 768px */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  .header h4 {
-    display: none;
+  .header {
+    padding: 20px;
+    h4 {
+      display: none;
+    }
   }
+  .content {
+    margin-left: 10px;
+    margin-right: 10px;
+}
   .selection select.form-select {
     font-size: 16px;
     width: 205px;
   }
   .selection {
-    width: 700px;
     justify-content: space-between;
   }
-  .video__main {
-    width: auto;
-  }
   video {
-    width: 270px;
-    height: 190px;
+    width: 240px;
+    height: 160px;
   }
   .video__info {
     justify-content: space-around;
-    width: auto;
+    width: 500px;
   }
   .video__info p {
     font-size: 14px;
   }
-  .video__info-left {
-    width: 50%;
-  }
-  .video__item {
-    width: fit-content;
-  }
-  .dealership p {
-    height: auto;
-  }
-  .video__title {
-    width: 696px;
+  .video__item, .video__title, .video__main, .selection {
+    width: 725px;
   }
   .info {
     width: 450px;
@@ -599,10 +595,13 @@ button.btn-close {
     margin-right: 5px;
 }
   .header {
-    padding: 20px;
+    padding: 10px;
   }
   .header__left img {
     width: 110px;
+  }
+  ul.footer__links {
+      display: none;
   }
   .selection_monitor {
     width: fit-content;
@@ -610,6 +609,9 @@ button.btn-close {
   .selection_monitor select.form-select {
     font-size: 16px;
   }
+  .selection select.form-select {
+    width: 280px;
+}
   .dashboard {
     flex-direction: column;
   }
@@ -630,7 +632,11 @@ button.btn-close {
     position: relative;
   }
   .consultant_right {
-    margin-left: 15px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+      p {
+        text-align: center;
+      }
   }
   .selection {
     flex-direction: column;
@@ -638,19 +644,24 @@ button.btn-close {
   }
   .video__item {
     flex-direction: column;
-    width: 300px;
+    width: 280px;
     margin: auto;
   }
   .video__title, .video__info {
     flex-direction: row;
-    width: 300px;
+    width: 280px;
   }
   .video__info {
     margin-top: 30px;
+    display: block;
   }
   .video__main {
-    width: 300px;
+    width: 280px;
     flex-direction: column;
+  }
+  video {
+    width: 280px;
+    height: 200px;
   }
   .logo {
     padding: 25px 0;
@@ -659,20 +670,20 @@ button.btn-close {
   }
   .logo__info {
     padding: 20px;
+      p {
+        text-align: center;
+      }
   }
   .modal p, .file-upload {
     width: 300px;
   }
   .modal p .input_style, .file-upload .input_style {
-    width: 220px;
+    width: 200px;
   }
 }
 /*Планшеты и телефоны*/
 @media only screen and (min-width: 320px) and (max-width: 992px) {
-  .header__icons, .header ul {
-    display: none;
-  }
-  .header__left h4 {
+  .header__icons, .header ul, .header__left h4 {
     display: none;
   }
   h5.title-adapt {
@@ -702,8 +713,8 @@ button.btn-close {
     width: 130px;
     font-size: 14px;
     height: 25px;
-    color: #ED1C24;
-    border: 1px solid #ED1C24;
+    color: $red;
+    border: 1px solid $red;
     background-color: #fff;
     position: absolute;
   }
@@ -719,13 +730,5 @@ button.btn-close {
     display: contents;
   }
 }
-
-@media only screen and (max-width: 370px) {
-  ul.footer__links {
-      display: none;
-  }
-}
-
-
 
 /*# sourceMappingURL=index.scss.map */

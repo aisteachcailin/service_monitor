@@ -70,7 +70,6 @@ input {
   display: flex;
   align-items: center;
 }
-
 .header__left img {
   width: 150px;
 }
@@ -350,6 +349,11 @@ video {
   height: 200px;
 }
 
+.video__title {
+  height: 25px;
+  position: relative;
+}
+
 .video__info, .logo {
   display: flex;
   justify-content: space-between;
@@ -388,11 +392,12 @@ video {
 /*logos*/
 .logo {
   padding: 35px 0;
+  position: relative;
 }
 
 .logo .btn-group.dropend {
   position: absolute;
-  right: 0;
+  right: 20%;
   top: 0;
 }
 
@@ -400,14 +405,6 @@ video {
   display: flex;
   flex-direction: column;
   width: 35%;
-}
-
-.dealership, .video__title {
-  position: relative;
-}
-
-.dealership p, .video__title {
-  height: 25px;
 }
 
 .checkbox {
@@ -547,42 +544,36 @@ button.btn-close {
 }
 /* Планшеты = 768px */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .header {
+    padding: 20px;
+  }
   .header h4 {
     display: none;
+  }
+  .content {
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .selection select.form-select {
     font-size: 16px;
     width: 205px;
   }
   .selection {
-    width: 700px;
     justify-content: space-between;
   }
-  .video__main {
-    width: auto;
-  }
   video {
-    width: 270px;
-    height: 190px;
+    width: 240px;
+    height: 160px;
   }
   .video__info {
     justify-content: space-around;
-    width: auto;
+    width: 500px;
   }
   .video__info p {
     font-size: 14px;
   }
-  .video__info-left {
-    width: 50%;
-  }
-  .video__item {
-    width: fit-content;
-  }
-  .dealership p {
-    height: auto;
-  }
-  .video__title {
-    width: 696px;
+  .video__item, .video__title, .video__main, .selection {
+    width: 725px;
   }
   .info {
     width: 450px;
@@ -599,16 +590,22 @@ button.btn-close {
     margin-right: 5px;
   }
   .header {
-    padding: 20px;
+    padding: 10px;
   }
   .header__left img {
     width: 110px;
+  }
+  ul.footer__links {
+    display: none;
   }
   .selection_monitor {
     width: fit-content;
   }
   .selection_monitor select.form-select {
     font-size: 16px;
+  }
+  .selection select.form-select {
+    width: 280px;
   }
   .dashboard {
     flex-direction: column;
@@ -630,7 +627,11 @@ button.btn-close {
     position: relative;
   }
   .consultant_right {
-    margin-left: 15px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  .consultant_right p {
+    text-align: center;
   }
   .selection {
     flex-direction: column;
@@ -638,19 +639,24 @@ button.btn-close {
   }
   .video__item {
     flex-direction: column;
-    width: 300px;
+    width: 280px;
     margin: auto;
   }
   .video__title, .video__info {
     flex-direction: row;
-    width: 300px;
+    width: 280px;
   }
   .video__info {
     margin-top: 30px;
+    display: block;
   }
   .video__main {
-    width: 300px;
+    width: 280px;
     flex-direction: column;
+  }
+  video {
+    width: 280px;
+    height: 200px;
   }
   .logo {
     padding: 25px 0;
@@ -660,19 +666,19 @@ button.btn-close {
   .logo__info {
     padding: 20px;
   }
+  .logo__info p {
+    text-align: center;
+  }
   .modal p, .file-upload {
     width: 300px;
   }
   .modal p .input_style, .file-upload .input_style {
-    width: 220px;
+    width: 200px;
   }
 }
 /*Планшеты и телефоны*/
 @media only screen and (min-width: 320px) and (max-width: 992px) {
-  .header__icons, .header ul {
-    display: none;
-  }
-  .header__left h4 {
+  .header__icons, .header ul, .header__left h4 {
     display: none;
   }
   h5.title-adapt {
@@ -717,11 +723,6 @@ button.btn-close {
   }
   .footer__links-group {
     display: contents;
-  }
-}
-@media only screen and (max-width: 370px) {
-  ul.footer__links {
-    display: none;
   }
 }
 
