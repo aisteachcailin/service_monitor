@@ -1,2 +1,2 @@
-# service_monitor
+# Сервисный монитор
 Ссылка: https://aisteachcailin.github.io/service_monitor/
