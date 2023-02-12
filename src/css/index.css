@@ -128,7 +128,6 @@ img#dasboard_icon, img#burger, img#admin {
 .page-up {
   position: absolute;
   bottom: 80%;
-  left: 50%;
 }
 
 .page-up a {
@@ -306,7 +305,7 @@ section.cars {
 }
 
 .consultant_left label#label-desktop {
-  left: 23px;
+  left: 13px;
   top: 0;
   position: absolute;
   width: 130px;
@@ -579,7 +578,7 @@ button.btn-close {
     width: 450px;
   }
   label#label-adapt {
-    left: 25px;
+    left: 15px;
     top: 215px;
   }
 }
@@ -614,7 +613,7 @@ button.btn-close {
     width: 330px;
   }
   label#label-adapt {
-    left: 25px;
+    left: 15px;
     bottom: -15px;
   }
   .consultant_info {
@@ -649,6 +648,7 @@ button.btn-close {
   .video__info {
     margin-top: 30px;
     display: block;
+    text-align: center;
   }
   .video__main {
     width: 280px;
@@ -659,7 +659,7 @@ button.btn-close {
     height: 200px;
   }
   .logo {
-    padding: 25px 0;
+    padding: 15px 0;
     width: auto;
     flex-direction: column;
   }
